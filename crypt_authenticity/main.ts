@@ -15,9 +15,9 @@ function main() {
   const encryptedMessage = bob.newMessage(bobMessageContent, alice);
 
   // alice can decrypt the message
-  logMessage(encryptedMessage, bob, alice);
-  // bob can decrypt the message
   logMessage(encryptedMessage, alice, bob);
+  // bob can decrypt the message
+  logMessage(encryptedMessage, bob, alice);
   // julie can't decrypt the message
   logMessage(encryptedMessage, julie, bob);
 }
@@ -31,7 +31,7 @@ function logMessage(message: string, receiver: Subject, sender: Subject) {
 
     console.log(
       `${receiver.getName()} decrypted a message: ` +
-      JSON.stringify(decryptedMessage),
+        JSON.stringify(decryptedMessage),
     );
   } catch (error) {
     console.log(`${receiver.getName()} can't decrypt the message`);

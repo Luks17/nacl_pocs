@@ -28,7 +28,7 @@ function logMessage(message: string, receiver: Subject) {
 
     console.log(
       `${receiver.getName()} decrypted a message: ` +
-      JSON.stringify(decryptedMessage),
+        JSON.stringify(decryptedMessage),
     );
   } catch (error) {
     console.log(`${receiver.getName()} can't decrypt the message`);
